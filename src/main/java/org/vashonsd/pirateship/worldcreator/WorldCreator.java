@@ -43,12 +43,13 @@ public class WorldCreator {
 		newWorld.addLocation(startingLocation);
 		newWorld.setPointer(startingLocation);
 		
-		
+		//Prompts user
+		writer.write("Now we will create a location to connect to your starting location." );
 		//Runs as long as user wants to create new locations
 		while(true) {
 			
 			//Gets name of new location
-			writer.write("What is the name of your new location");
+			writer.write("What is the name of your new location?");
 			Location newLocation = new Location(reader.read());
 			
 			//Asks user name of location from which the new location will branch from
@@ -137,7 +138,7 @@ public class WorldCreator {
 				Route current = new Route(from.getName() + " - " + to.getName());
 				
 				//sets description of the route
-				writer.write("Describe how you get to " + to + "? ");
+				writer.write("Describe how you get to " + to.getName() + "? ");
 				current.setDescription(reader.read());
 				
 				//gets and sets the accessor
