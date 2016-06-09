@@ -1,0 +1,42 @@
+{
+  "name": "Vashon",
+  "locations": [
+    {
+      "locname": "VHS",
+      "description": "jkl",
+      "splash": "ljk;",
+      "route_id": [
+        "VHS - CES"
+      ],
+      "inventory": []
+    },
+    {
+      "locname": "CES",
+      "description": "lkj",
+      "splash": "ljk",
+      "route_id": [
+        "CES - VHS"
+      ],
+      "inventory": []
+    }
+  ],
+  "starting_location": "VHS",
+  "route": [
+    {
+      "id": "VHS - CES",
+      "name": "walk",
+      "description": "lkj",
+      "splash": "lkj",
+      "from": "VHS",
+      "destination": "CES"
+    },
+    {
+      "id": "CES - VHS",
+      "name": "walk",
+      "description": "ljk",
+      "splash": "lj",
+      "from": "CES",
+      "destination": "VHS"
+    }
+  ]
+}

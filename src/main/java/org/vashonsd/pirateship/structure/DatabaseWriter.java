@@ -13,7 +13,7 @@ public class DatabaseWriter {
 		ArrayList<String> writtenids = new ArrayList<String>();
 		ArrayList<Location> checkedLocations = new ArrayList<Location>();
 		JsonWriter writer;
-		String fileName = "main/resources/" + world.getName() + ".json";
+		String fileName = "src/main/resources/" + world.getName() + ".json";
 		File file = new File(fileName);
 		if (!file.exists() && file.isDirectory()) {
 			file.createNewFile();

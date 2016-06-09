@@ -28,11 +28,12 @@ public class Game {
 		
 		quitWord = "exit";
 
-    	//thisWorld = DatabaseParser.parseWorld(world);
-		thisWorld = WorldBuilder.makeWorld(world);
+    	thisWorld = DatabaseParser.parseWorld(world);
+		//thisWorld = WorldBuilder.makeWorld(world);
 		
 		this.players = new PlayerRegistry();
 		Player p = new Player("Demo", "Just a player");
+		Location start = thisWorld.getStartingLocation();
 		p.setLocation(thisWorld.getStartingLocation());
 		String pid = players.EnrollPlayer(p);
 		

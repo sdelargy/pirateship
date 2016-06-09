@@ -1,6 +1,9 @@
 package org.vashonsd.pirateship.structure;
 
+import java.io.File;
 import java.io.IOException;
+
+import org.vashonsd.pirateship.io.*;
 
 import org.vashonsd.pirateship.creature.CreatureFactory;
 import org.vashonsd.pirateship.interactions.*;
@@ -20,7 +23,7 @@ public class WorldBuilder {
 	/*
 	 * Consider this a very simple example of a Factory method; it makes a World based on a given String.
 	 */
-	public static World makeWorld(String s)
+	public static World makeWorld(String s) throws IOException
 	{
 		if (s.equals("BBS"))
 		{
@@ -96,6 +99,7 @@ public class WorldBuilder {
 		//w.addLocation(casino);
 		
 		
+//<<<<<<< HEAD
 //		gameRoom.addGame(new TwentyQuestionsFactory());
 //		gameRoom.addGame(new CookieClickerFactory());
 //		gameRoom.addGame(new MathFactory());
@@ -109,6 +113,9 @@ public class WorldBuilder {
 		//prison.addGame(new PrisonEscapeFactory());
 		
 		w.setStartingLocation(main);
+//=======
+		w.setPointer(main);
+//>>>>>>> refs/heads/creatures
 		
 		return w;
 	}
@@ -159,9 +166,15 @@ public class WorldBuilder {
 		
 		return w;
 	}
+<<<<<<< HEAD
 	*/
 
 	/*
+=======
+	
+	
+	
+>>>>>>> refs/heads/creatures
 	public static World littleTown() {
 		World w = new World("Littletown");
 		Location square = new Location("Town square", "It's bustling with excitment.");
