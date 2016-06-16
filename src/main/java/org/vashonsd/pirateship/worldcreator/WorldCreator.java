@@ -46,6 +46,18 @@ public class WorldCreator {
 		
 		Location startingLocation = new Location(sName, sDescription, sSplash);
 		
+		/*
+		writer.write("Would you like any items in this location");
+		if(reader.read().equalsIgnoreCase("yes")) {
+			writer.write("What item would you like to add");
+			String newItem = reader.read();
+			
+			
+			startingLocation.addToInventory(newItem);
+		}
+		
+		*/
+		
 		//Add the starting location to the world and set it as the starting location
 		newWorld.addLocation(startingLocation);
 		newWorld.setStartingLocation(startingLocation);

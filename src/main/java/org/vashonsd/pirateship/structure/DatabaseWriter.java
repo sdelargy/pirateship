@@ -15,9 +15,16 @@ public class DatabaseWriter {
 		JsonWriter writer;
 		String fileName = "src/main/resources/" + world.getName() + ".json";
 		File file = new File(fileName);
-		if (!file.exists() && file.isDirectory()) {
+		if(file.exists()) {
+			try {
+				boolean deleted = file.delete();
+			}
+			catch(Exception e) {
+				e.printStackTrace();
+			}
+		}
+		if (!file.exists()) {
 			file.createNewFile();
-			System.out.println("Created?");
 		}
 		writer = new JsonWriter(new FileWriter(file));
 		writer.setIndent("  ");
